@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden; /* Ingen skrollbarhet */
+}
+
+.screen {
+  position: relative; /* Viktigt för absolut positionering av barn */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    #ffb3ba 0%,
+    #ffdfba 33%,
+    #ffffba 66%,
+    #baffc9 100%
+  );
+}
+.arrow-btn {
+  position: absolute;
+  bottom: calc(100px + env(safe-area-inset-bottom));
+  font-size: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  z-index: 10;
+  transition: transform 0.2s;
+}
+
+.arrow-btn:hover {
+  transform: scale(1.2);
+}
+.up-arrow {
+  bottom: auto; /* placera uppåt i sektionen */
+  top: 20px;    /* placera uppåt i sektionen */
+  
+}
+
+/* Exempelknappar för spel-länkar */
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bffa7;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+.btn:hover {
+  background-color: #0056b3;
+}

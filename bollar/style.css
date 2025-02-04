@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient(to right, #f0f0f0, #f0f0f0);
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+    margin-top: 20px;
+    overflow: hidden;
+    touch-action: none;  
+}
+#ballOne {
+    background-color: #f00;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid #000;
+    cursor: grab;
+}
+#ballTwo {
+    background-color: #00f;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    border: 1px solid #000;
+    cursor: grab;
+}
+#redGoal {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: red; 
+    bottom: 0; /* Placera längst ner */
+    left: 0;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    border-radius: 5px;
+}
+
+#blueGoal {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: blue; 
+    top: 0; /* Placera överst */
+    right: 0;
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-radius: 5px;
+}
+#greenGoal {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: green; 
+    top: 0; /* Placera överst */
+    left: 0;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    border-radius: 5px;
+}
+#yellowGoal {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: yellow; 
+    bottom: 0;
+    right: 0;
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    border-radius: 5px;
+}
+
+#alert {
+    position: absolute;
+    height: 40vh;
+    width: 60vw;
+    font-size: 15vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 5px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+#startBtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #000;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 25;
+}

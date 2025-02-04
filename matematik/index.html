@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mattespel - Plus</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Mattespel</h1>
+  <p>Välj rätt svar!</p>
+
+  <!-- Visar två slumpade tal: num1 + num2 -->
+  <div class="equation-container">
+    <span id="num1"></span> + <span id="num2"></span> = ?
+  </div>
+
+  <!-- Tre svarsalternativ -->
+  <div class="answer-options">
+    <button class="answer-btn" data-answer="0">0</button>
+    <button class="answer-btn" data-answer="1">1</button>
+    <button class="answer-btn" data-answer="2">2</button>
+  </div>
+
+  <!-- Ljud för rätt och fel -->
+  <audio id="correctSound" src="correct.mp3" preload="auto"></audio>
+  <audio id="wrongSound" src="wrong.mp3" preload="auto"></audio>
+
+  <script src="app.js"></script>
+</body>
+</html>

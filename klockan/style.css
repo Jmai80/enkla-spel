@@ -1,0 +1,99 @@
+/* Enkel reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #ffb3ba 0%, #ffdfba 33%, #ffffba 66%, #baffc9 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+  }
+  
+  #timeText {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+  
+  /* Container för klockalternativen */
+  .clock-options {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Stil för varje klocka */
+  .clock {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border: 4px solid #333;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.3s;
+  }
+  
+  .clock:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Stil för klockhands-elementen */
+  .hand {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: 50% 100%;
+    background: #333;
+  }
+  
+  /* Timvisaren */
+  .hour-hand {
+    width: 6px;
+    height: 40px;
+    border-radius: 3px;
+    transform: translate(-50%, -100%) rotate(0deg);
+  }
+  
+  /* Minutvisaren */
+  .minute-hand {
+    width: 4px;
+    height: 60px;
+    background: #666;
+    border-radius: 2px;
+    transform: translate(-50%, -100%) rotate(0deg);
+  }
+  
+  /* Stil för siffrorna på urtavlan */
+  .clock-number {
+    position: absolute;
+    font-size: 0.8rem;
+    color: #333;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+  }
+  
+  /* Feedback: korrekt (grön) och fel (röd) */
+  .clock.correct {
+    border-color: #4caf50;
+  }
+  
+  .clock.wrong {
+    border-color: #f44336;
+  }
+  

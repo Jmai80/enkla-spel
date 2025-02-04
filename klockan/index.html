@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mattespel: Klockan</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Ladda Google Font: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" 
+    rel="stylesheet">
+</head>
+<body>
+  <h1>Vilken klocka visar rätt?</h1>
+  <!-- Tidsfrasen, t.ex. "Klockan två" eller "Halv sex" -->
+  <p id="timeText"></p>
+  
+  <!-- Container där de tre klockalternativen placeras -->
+  <div class="clock-options"></div>
+  
+  <!-- Ljudfiler -->
+  <audio id="correctSound" src="../matematik/correct.mp3" preload="auto"></audio>
+  <audio id="wrongSound" src="../matematik/wrong.mp3" preload="auto"></audio>
+  
+  <script src="app.js"></script>
+</body>
+</html>

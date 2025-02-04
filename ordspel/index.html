@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emoji Ordpussel</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Font: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" 
+    rel="stylesheet">
+</head>
+<body>
+  <h1>Välj rätt bild</h1>
+  <p id="question">Frågan kommer här</p>
+  
+  <div class="answer-options">
+    <button class="answer-btn" data-answer="0"></button>
+    <button class="answer-btn" data-answer="1"></button>
+    <button class="answer-btn" data-answer="2"></button>
+  </div>
+  
+  <div id="feedback"></div>
+  
+  <!-- Ljud för feedback (justera sökvägarna om nödvändigt) -->
+  <audio id="correctSound" src="../matematik/correct.mp3" preload="auto"></audio>
+  <audio id="wrongSound" src="../matematik/wrong.mp3" preload="auto"></audio>
+  
+  <script src="app.js"></script>
+</body>
+</html>

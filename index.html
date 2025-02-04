@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enkla Spel - Landningssida</title>
+  <link rel="stylesheet" href="style.css" />
+  <link svg="image/svg+xml" href="../favicon.svg" rel="icon">
+
+</head>
+<body>
+
+  <!-- Sektion 1 -->
+  <section id="section1" class="screen landing">
+    <h1>Enkla Spel</h1>
+    <h2>Välj spel</h2>
+    <div class="game-links">
+      <a href="bollar/index.html" class="btn">Bollar ⚽️</a>
+      <a href="musik/index.html" class="btn">Musik 🎵</a>
+      <a href="ballonger/index.html" class="btn">Ballonger 🎈</a>
+      <a href="labyrint/index.html" class="btn">Labyrint 🏃</a>
+      <a href="rita/index.html" class="btn">Rita 🎨</a>
+    </div>
+    <!-- Nedåtpil -->
+    <button class="arrow-btn" onclick="goToSection('section2')">⬇️</button>
+  </section>
+
+  <!-- Sektion 2 -->
+  <section id="section2" class="screen landing">
+    <h2>Klurigare spel 🤔</h2>
+    <div class="game-links">
+      
+      <a href="matematik/index.html" style="background-color: orangered;" class="btn">Matematik Plus 🧮</a>
+      <a href="matematikMinus/index.html" style="background-color: orangered;" class="btn">Matematik Minus 🧮</a>
+      <a href="klockan/index.html" style="background-color: orangered;" class="btn">Klockan ⏰</a>
+      <a href="ordspel/index.html" style="background-color: orangered;" class="btn">Ord till bild</a>
+      <a href="ordspel2/index.html" style="background-color: orangered;" class="btn">Bild till ord</a>
+    </div>
+    <!-- Uppåtpil -->
+    <button class="arrow-btn up-arrow" onclick="goToSection('section1')">⬆️</button>
+  </section>
+
+  <script>
+    function goToSection(sectionId) {
+      document.getElementById(sectionId).scrollIntoView({ behavior: "auto" });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>Musikspelare</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="../favicon.svg" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" 
+    rel="stylesheet"
+  />
+</head>
+<body>
+
+  <!-- Sidhuvud med rubrik -->
+  <header>
+    <!-- Byt href om du faktiskt vill upp en nivå i filstrukturen, ex: "../index.html" -->
+    <a href="../index.html" class="back-arrow">&#8592;</a>
+    <h1>Ljudspelare</h1>
+  </header>
+
+  <!-- Huvudinnehåll -->
+  <main>
+
+    <!-- Sektion 1: Ljud -->
+    <section id="ljud-section">
+      <h2>DJUR</h2>
+      <div class="btn-container">
+        <button id="dog" class="audio-btn">🦮</button>
+        <button id="cat" class="audio-btn">😺</button>
+        <button id="crow" class="audio-btn">🐦‍⬛</button>
+        <button id="elephant" class="audio-btn">🐘</button>
+        <button id="chicken" class="audio-btn">🐓</button>
+        <button id="horse" class="audio-btn">🐎</button>
+        <button id="lion" class="audio-btn">🦁</button>
+        <button id="bee" class="audio-btn">🐝</button>
+        <button id="owl" class="audio-btn">🦉</button>
+      </div>
+    </section>
+
+    <!-- Sektion 2: Musik -->
+    <section id="musik-section">
+      <h2>instrument</h2>
+      <div class="btn-container">
+        <button id="piano" class="audio-btn">🎹</button>
+        <button id="drums" class="audio-btn">🥁</button>
+        <button id="violin" class="audio-btn">🎻</button>
+        <button id="guitar" class="audio-btn">🎸</button>
+        <button id="trumpet" class="audio-btn">🎺</button>
+        <button id="flute" class="audio-btn">🪈</button>
+      </div>
+    </section>
+
+  </main>
+<script src="app.js"></script>
+</body>
+</html>

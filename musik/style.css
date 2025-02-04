@@ -1,0 +1,101 @@
+/* Nollställning av marginaler och padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Kroppens grundinställningar */
+  body {
+    /* Testa ett lekfullt typsnitt — "Comic Sans MS" finns på de flesta system,
+       annars fallback till Arial. Du kan också ladda ett Google Font. */
+    font-family: "Poppins", Arial, sans-serif;
+    
+    /* Färgglad gradient som bakgrund */
+    background: linear-gradient(
+      135deg,
+      #ffb3ba 0%,
+      #ffdfba 33%,
+      #ffffba 66%,
+      #baffc9 100%
+    );
+    color: #333;
+    min-height: 100vh; 
+  }
+  /* Sidhuvud med enkel centrerad stil */
+/* STICKY HEADER */
+header {
+  position: sticky; 
+  top: 0;               /* Håll fast vid sidans topp */
+  z-index: 10;          /* Se till att headern ligger ovanpå annat */
+  display: flex;        /* För att lägga back-arrow och titel i rad */
+  align-items: center;  /* Vertikal centrering */
+  padding: 10px 20px;   
+  background: rgba(255, 255, 255, 0.8);  /* Lätt genomskinlig bakgrund */
+  backdrop-filter: blur(5px);            /* Gör bakgrunden lite suddig (stöd varierar) */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Liten skugga för att separera från innehållet */
+}
+
+/* Back-pil */
+.back-arrow {
+  text-decoration: none;
+  color: #ff4081;       /* En knallig färg, anpassa efter smak */
+  font-size: 1.8rem;    /* Storlek på pilen */
+  margin-right: 20px;
+}
+
+/* Titel i headern */
+header h1 {
+  font-size: 2rem;
+  color: #ff4081;
+  margin: 0;
+}
+  
+  /* Huvudinnehåll */
+  main {
+    width: 90%;
+    max-width: 800px;
+    margin: 2rem auto;
+  }
+  
+  /* Varje sektion */
+  section {
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  section h2 {
+    margin-bottom: 1rem;
+    text-transform: uppercase; /* eller t.ex. uppercase, beroende på hur du vill ha rubrikerna */
+    font-weight: 600;
+  }
+  
+  /* Container för alla knappar */
+  .btn-container {
+    display: flex;
+    flex-wrap: wrap;           /* så att knapparna radbryts om de inte får plats */
+    gap: 10px;
+  }
+  
+  /* Stil på varje knapp */
+  .audio-btn {
+    flex: 1 0 30%;
+    /* "flex: 1 0 30%" = minst 30% i bredd, men anpassa efter ledigt utrymme */
+    min-width: 80px;           /* för att knapparna inte ska bli för små */
+    padding: 1rem;
+    background: #ececec;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 2em;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .audio-btn:hover {
+    background: #ddd;
+  }
+  

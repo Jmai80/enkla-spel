@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mattespel: Minus</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Ladda Google Font Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" 
+    rel="stylesheet">
+</head>
+<body>
+  <h1>Mattespel Minus</h1>
+  <p>Välj rätt svar!</p>
+
+  <!-- Ekvations-container -->
+  <div class="equation-container">
+    <span id="num1"></span> - <span id="num2"></span> = ?
+  </div>
+
+  <!-- Svarsalternativ -->
+  <div class="answer-options">
+    <button class="answer-btn" data-answer="0">0</button>
+    <button class="answer-btn" data-answer="1">1</button>
+    <button class="answer-btn" data-answer="2">2</button>
+  </div>
+
+  <!-- Ljudfiler -->
+  <audio id="correctSound" src="correct.mp3" preload="auto"></audio>
+  <audio id="wrongSound" src="wrong.mp3" preload="auto"></audio>
+
+  <script src="app.js"></script>
+</body>
+</html>

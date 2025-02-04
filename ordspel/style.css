@@ -1,0 +1,65 @@
+/* Enkel reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #ffb3ba, #ffdfba, #ffffba, #baffc9);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+  }
+  
+  #question {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .answer-options {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .answer-btn {
+    font-size: 3rem;  /* Emojis visas i stor storlek */
+    width: 80px;
+    height: 80px;
+    padding: 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .answer-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .answer-btn.correct {
+    background-color: #4caf50;
+  }
+  
+  .answer-btn.wrong {
+    background-color: #f44336;
+  }
+  
+  #feedback {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    min-height: 2em; /* Reservutrymme för text, justera efter behov */
+  }
+  

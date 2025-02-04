@@ -1,0 +1,66 @@
+/* Enkel reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(
+      135deg,
+      #ffb3ba 0%,
+      #ffdfba 33%,
+      #ffffba 66%,
+      #baffc9 100%
+    );
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  h1 {
+    margin-bottom: 10px;
+  }
+  
+  p {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+  }
+  
+  .equation-container {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Layout för svarsalternativen */
+  .answer-options {
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* Alla svarsknappar */
+  .answer-btn {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #fff;
+    border: 3px solid #888;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Grön bakgrund när svaret är korrekt */
+  .answer-btn.correct {
+    background-color: #4caf50; /* Grön */
+    color: #fff;
+  }
+  
+  /* Röd bakgrund när svaret är fel */
+  .answer-btn.wrong {
+    background-color: #f44336; /* Röd */
+    color: #fff;
+  }
+  

@@ -1,0 +1,154 @@
+/* Nollställa standardmarginaler och padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Kroppens grundstil */
+body, html {
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(
+    135deg,
+    #ffb3ba 0%,
+    #ffdfba 33%,
+    #ffffba 66%,
+    #baffc9 100%
+  );
+  color: #333;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  touch-action: none;
+}
+
+/* Spelområdet */
+.game-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Spelaren (cirkelform) */
+.player {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 8vw;
+  height: 8vw;
+  background: #333;
+  border-radius: 50%;
+  z-index: 3;
+}
+
+/* Målet (cirkelform) */
+.goal {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 10vw;
+  height: 10vw;
+  background: pink;
+  border-radius: 50%;
+  z-index: 3;
+  
+  /* Animationen körs i 1.5 sekunder och upprepas oändligt */
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Här definierar vi keyframes för puls och färgändring */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    background: pink;
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    background: #ff7eb9;
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    background: pink;
+    opacity: 1;
+  }
+}
+
+/* Väggarnas gemensamma stil – oförändrad! */
+.wall {
+  position: absolute;
+  background: #444;
+  z-index: 2;
+  border: 2px solid #000;
+  width: 5vw;
+  height: 60vh;
+}
+
+.wall1 {
+  top: 0;
+  left: 15vw;
+}
+
+.wall2 {
+  bottom: 0;
+  left: 40vw;
+}
+
+.wall3 {
+  top: 0;
+  right: 35vw;
+}
+
+.wall4 {
+  bottom: 0;
+  right: 15vw;
+}
+
+/* Alert-stil */
+.alert {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  font-size: 5em;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  border: 2px solid #000;
+  border-radius: 10px;
+  z-index: 4;
+  display: none;
+}
+
+/* Start-overlay: täcker hela skärmen innan spelet startar */
+.start-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Start-knapp */
+.start-btn {
+  padding: 16px 32px;
+  font-size: 1.8rem;
+  color: #000;
+  background-color: grey;
+  border: black;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.start-btn:hover {
+  
+  transform: scale(1.05);
+}

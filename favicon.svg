@@ -1,0 +1,23 @@
+<svg 
+  version="1.1" 
+  width="32" 
+  height="32" 
+  viewBox="0 0 32 32" 
+  xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Bakgrunden (vit cirkel) -->
+  <circle cx="16" cy="16" r="16" fill="#fff" />
+
+  <!-- Färgsegment 1 (röd) -->
+  <path d="M16 16 L16 0 A16 16 0 0 1 32 16 z" fill="#F44336" />
+  
+  <!-- Färgsegment 2 (grön) -->
+  <path d="M16 16 L32 16 A16 16 0 0 1 16 32 z" fill="#4CAF50" />
+  
+  <!-- Färgsegment 3 (blå) -->
+  <path d="M16 16 L16 32 A16 16 0 0 1 0 16 z" fill="#2196F3" />
+  
+  <!-- Färgsegment 4 (gul) -->
+  <path d="M16 16 L0 16 A16 16 0 0 1 16 0 z" fill="#FFC107" />
+
+</svg>

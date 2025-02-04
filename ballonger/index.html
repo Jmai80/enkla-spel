@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ballonger</title>
+    <link rel="stylesheet" href="style.css">
+    <link icon="svg" href="../favicon.svg" type="image/x-icon" rel="shortcut icon">
+</head>
+<body>
+
+    <h1>Poppa ballonger!</h1>
+    <p>Tryck på ballongerna för att spräcka dem!</p>
+  
+    <!-- En knapp för att starta/återstarta spelet -->
+    <button id="startBtn">Starta!</button>
+  
+    <!-- Om du vill spela ett ljud när en ballong poppas -->
+    <audio id="popSound" src="pop.mp3" preload="auto"></audio>
+    
+    <!-- Om du vill spela ett ljud när alla ballonger är poppade -->
+    <audio id="successSound" src="success.mp3" preload="auto"></audio>
+  
+    <!-- Container där ballonger läggs in -->
+    <div id="gameArea"></div>
+  
+    <!-- En enkel vinstmeddelande/alert -->
+    <div id="winningMessage">Bra jobbat, du poppade alla ballonger!</div>
+  
+    <script src="app.js"></script>
+  </body>
+  </html>
