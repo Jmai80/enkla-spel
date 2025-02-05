@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Kroppens grundstil */
+  body, html {
+    font-family: "Poppins", Arial, sans-serif;
+    background: linear-gradient(
+      135deg,
+      #ffb3ba 0%,
+      #ffdfba 33%,
+      #ffffba 66%,
+      #baffc9 100%
+    );
+    color: #333;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    touch-action: none;
+  }
+  
+  /* Spelområdet */
+  .game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  /* Spelaren (cirkelform) */
+  .player {
+    position: absolute;
+    scale: 0.6;
+    top: 20px;
+    left: 20px;
+    width: 8vw;
+    height: 8vw;
+    background: transparent; /* Gör bakgrunden transparent för att visa emojin */
+    border-radius: 50%;
+    z-index: 3;
+    transform: scaleX(-1);
+  }
+  
+  /* Målet (cirkelform) */
+  .goal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 8vw;
+    height: 8vw;
+    background: transparent; 
+    border-radius: 50%;
+    z-index: 3;
+  }
+  /* Väggarnas gemensamma stil – oförändrad för nivå 1 */
+  .wall {
+    position: absolute;
+    background: #444;
+    z-index: 2;
+    border: 2px solid #000;
+    width: 5vw;
+    height: 60vh;
+  }
+  
+  .wall1 {
+    top: 0;
+    left: 15vw;
+  }
+  
+  .wall2 {
+    top: 0;
+    left: 45vw;
+  }
+  
+  .wall3 {
+    bottom: 0;
+    right: 35vw;
+  }
+  
+  .wall4 {
+    top: 0;
+    right: 15vw;
+    height: 65vh;
+  }
+  
+  .wall5 {
+    height: 20vh;
+    bottom: 0vh;
+    left: 15vw; 
+  }
+  
+  /* Vägg 6: En vertikal vägg */
+  .wall6 {
+    position: absolute;
+    height: 30vh;
+    top: 0vh;
+    left: 30vw;
+  }
+  
+  /* Vägg 7: En ytterligare vertikal vägg, på samma left för att skapa en glipa */
+  .wall7 {
+    position: absolute;
+    height: 50vh;
+    bottom: 0vh;
+    left: 30vw;
+  }
+  
+  /* Alert-stil */
+  .alert {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    font-size: 5em;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 10px;
+    z-index: 4;
+    display: none;
+  }
+  
+  /* Start-overlay */
+  .start-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  /* Start-knapp */
+  .start-btn {
+    padding: 16px 32px;
+    font-size: 1.8rem;
+    color: #000;
+    background-color: grey;
+    border: 2px solid #000;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .start-btn:hover {
+    transform: scale(1.05);
+  }
+  
+  /* --- Nya regler: Ändra spelarens och målets figur till emojis --- */
+  
+  /* Spelaren visas nu med en emoji via pseudoelementet ::before */
+  .player::before {
+    content: "🏃‍♂️";  /* Ändra vid behov, tex "🏃" */
+    font-size: 8vw;   /* Justera storleken så att den passar div:en */
+    display: block;
+    text-align: center;
+    line-height: 8vw; /* Centrerar vertikalt */
+  }
+  .goal::before {
+    content: "🏁";    /* Ändra vid behov, tex "🎯" */
+    font-size: 8vw;
+    display: block;
+    text-align: center;
+    line-height: 8vw;
+  }
+  

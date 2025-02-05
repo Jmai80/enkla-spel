@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Labyrint - Nivå 2</title>
+  <link rel="stylesheet" href="style.css">
+  <link svg="image/svg+xml" href="../favicon.svg" rel="icon">
+</head>
+<body>
+  <!-- Start-overlay: täcker hela skärmen med en snygg start-knapp -->
+  <div class="start-overlay">
+    <button class="start-btn">STARTA</button>
+  </div>
+  
+  <!-- Spelområdet -->
+  <div class="game-container">
+    <!-- Spelare (rund div) -->
+    <div class="player"></div>
+    
+    <!-- Mål (rund div) -->
+    <div class="goal"></div>
+  
+    <!-- De ursprungliga fyra väggarna (nivå 1) -->
+    <div class="wall wall1"></div>
+    <div class="wall wall2"></div>
+    <div class="wall wall3"></div>
+    <div class="wall wall4"></div>
+    
+    <!-- NYA väggar för nivå 2 -->
+    <!-- Vägg 5: En lång horisontell vägg -->
+    <div class="wall wall5"></div>
+    <!-- Vägg 6 och 7: Två vertikala väggar med samma left-värde som skapar en glipa -->
+    <div class="wall wall6"></div>
+    <div class="wall wall7"></div>
+    
+    <div class="alert">🎊 🎉 🎈</div>
+  </div>
+  
+  <script src="app.js"></script>
+</body>
+</html>
