@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Memory med Bilder (Lösenordsskyddat)</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Font: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" 
+    rel="stylesheet">
+</head>
+<body>
+  <!-- Lösenordsoverlay -->
+  <div id="passwordOverlay" class="password-overlay">
+    <div class="password-box">
+      <h2>Ange lösenord</h2>
+      <input type="password" id="passwordInput" placeholder="Lösenord">
+      <button id="passwordBtn">Skicka</button>
+      <p id="passwordError" class="error-message"></p>
+    </div>
+  </div>
+
+  <!-- Resten av spelet -->
+  <h1>Memory med Bilder</h1>
+  <div class="memory-container"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
