@@ -1,0 +1,70 @@
+/* Enkel reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Grundstil för body */
+  body, html {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #ffb3ba, #ffdfba, #ffffba, #baffc9);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  /* Nivåvisning, placerad i övre högra hörnet */
+  .level-display {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    z-index: 10;
+  }
+  
+  /* Simon-container: En fyrkant som rymmer de fyra knapparna */
+  .simon-container {
+    width: 400px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+  }
+  
+  /* Simon-knappar */
+  .simon-btn {
+    border: 5px solid #222;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  
+  /* Färger för varje knapp */
+  .red {
+    background-color: red;
+  }
+  .green {
+    background-color: green;
+  }
+  .blue {
+    background-color: blue;
+  }
+  .yellow {
+    background-color: yellow;
+  }
+  
+  /* Blink-effekt: när en knapp ska "lysa", lägg till klassen active */
+  .simon-btn.active {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+  

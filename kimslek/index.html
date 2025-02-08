@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kims Lek</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Font: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" 
+    rel="stylesheet">
+</head>
+<body>
+  <h1>Kims Lek</h1>
+  <!-- Denna underrubrik kommer att uppdateras när timern är slut -->
+  <h2 id="subHeading" class="subheading"></h2>
+  
+  <!-- Timer, placerad i övre högra hörnet -->
+  <div id="timer" class="timer"></div>
+  
+  <!-- Container där föremålen visas -->
+  <div id="objectContainer" class="memory-container two-rows-5"></div>
+
+  
+  <!-- Container för svarsalternativ -->
+  <div id="optionsContainer" class="options-container"></div>
+  
+  <!-- Feedback -->
+  <div id="feedback" class="feedback"></div>
+  
+  <!-- Start-knapp -->
+  <button id="startButton" class="start-button">Starta spelet</button>
+  
+  <script src="app.js"></script>
+</body>
+</html>

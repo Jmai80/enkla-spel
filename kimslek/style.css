@@ -1,0 +1,270 @@
+/* --- Nollställning och grundinställningar --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #ffb3ba, #ffdfba, #ffffba, #baffc9);
+    color: #333;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    touch-action: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Rubriker */
+  h1 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+  }
+  
+  .subheading {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #555;
+  }
+  
+  /* Timer, placerad i övre högra hörnet */
+  .timer {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2.5rem;
+    color: #000;
+    z-index: 1100;
+  }
+  
+  /* Memory-container med ett fast bredd för att centrera innehållet */
+  /* Vi vill ha 3 kolumner á 100px plus 2 gap á 30px = 300 + 60 = 360px */
+  .memory-container {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px;
+    gap: 30px;
+    width: calc(3 * 100px + 2 * 30px); /* 360px */
+    margin: 0 auto;
+    /* Definierar grid-områden för 5 objekt:
+       Rad 1: områden "a", "b", "c"
+       Rad 2: områden "d", "e" med den första kolumnen tom */
+    grid-template-areas:
+      "a b c"
+      "d e .";
+  }
+  
+  /* Alternativt, om du vill ha en uppochnervänd triangel med tom cell i första kolumnen i rad 2, använd: */
+  .memory-container.two-rows-5 {
+    grid-template-areas:
+      "a b c"
+      ". d e";
+  }
+  
+  /* Styling för varje objekt */
+  .object-item {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;  /* Ökar storleken på emojin */
+    border: 2px solid #000;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  
+  /* Container för svarsalternativ */
+  .options-container {
+    margin-top: 20px;
+  }
+  
+  /* Svarsalternativ-knappar */
+  .options-container button {
+    font-size: 1.8rem;
+    padding: 10px 20px;
+    margin: 5px;
+    border: 2px solid #000;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: #fff;
+    transition: background-color 0.3s;
+  }
+  
+  .options-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Feedback-element */
+  .feedback {
+    margin-top: 20px;
+    font-size: 1.8rem;
+    min-height: 2em;
+  }
+  
+  /* Start-knapp */
+  .start-button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 1.8rem;
+    border: 2px solid #000;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: grey;
+    color: #000;
+    transition: transform 0.2s, background-color 0.3s;
+  }
+  
+  .start-button:hover {
+    transform: scale(1.05);
+  }
+  
+  /* --- Eventuellt befintliga regler för labyrint (om de används) --- */
+  /* ... */
+  
+  /* --- Nya regler: Ändra spelarens och målets figur till emojis --- */
+  .player::before {
+    content: "🏃‍♂️";
+    font-size: 8vw;
+    display: block;
+    text-align: center;
+    line-height: 8vw;
+  }
+  
+  .goal::before {
+    content: "🏁";
+    font-size: 8vw;
+    display: block;
+    text-align: center;
+    line-height: 8vw;
+  }
+  
+  /* Ta bort bakgrundsfärgen från puls-animationen om du vill att målet endast ska visa emojin */
+  /* Om du vill behålla puls-effekten på målet (med endast opacity-ändringar), kan du ändra keyframes: */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* --- Övriga regler (t.ex. för .wall, .alert, .start-overlay) --- */
+  
+  /* Väggarnas gemensamma stil – oförändrad */
+  .wall {
+    position: absolute;
+    background: #444;
+    z-index: 2;
+    border: 2px solid #000;
+    width: 5vw;
+    height: 60vh;
+  }
+  
+  .wall1 {
+    top: 0;
+    left: 15vw;
+  }
+  
+  .wall2 {
+    top: 0;
+    left: 45vw;
+  }
+  
+  .wall3 {
+    bottom: 0;
+    right: 35vw;
+  }
+  
+  .wall4 {
+    top: 0;
+    right: 15vw;
+    height: 80vh;
+  }
+  
+  .wall5 {
+    height: 20vh;
+    bottom: 0vh;
+    left: 15vw; 
+  }
+  
+  .wall6 {
+    position: absolute;
+    height: 30vh;
+    top: 0vh;
+    left: 30vw;
+  }
+  
+  .wall7 {
+    position: absolute;
+    height: 50vh;
+    bottom: 0vh;
+    left: 30vw;
+  }
+  
+  /* Alert-stil */
+  .alert {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    font-size: 5em;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 10px;
+    z-index: 4;
+    display: none;
+  }
+  
+  /* Start-overlay */
+  .start-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  /* Start-knapp */
+  .start-btn {
+    padding: 16px 32px;
+    font-size: 1.8rem;
+    color: #000;
+    background-color: grey;
+    border: 2px solid #000;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .start-btn:hover {
+    transform: scale(1.05);
+  }
+  .memory-container.two-rows-5 {
+    grid-template-areas:
+      "a b c"
+      ". d e";
+  }
+   
