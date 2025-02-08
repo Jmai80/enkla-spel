@@ -1,3 +1,30 @@
+/* Nollställa standardmarginaler och padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5); /* 50% genomskinlig vit bakgrund */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+
+header h1 {
+  margin: 0;
+  padding: 10px 20px;
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+}
+
+/* Kroppens grundstil */
 body {
   margin: 0;
   padding: 0;
@@ -5,6 +32,7 @@ body {
   overflow: hidden; /* Ingen skrollbarhet */
 }
 
+/* Sektioner */
 .screen {
   position: relative; /* Viktigt för absolut positionering av barn */
   width: 100vw;
@@ -22,6 +50,8 @@ body {
     #baffc9 100%
   );
 }
+
+/* Pilknappar */
 .arrow-btn {
   position: absolute;
   bottom: calc(100px + env(safe-area-inset-bottom));
@@ -37,10 +67,10 @@ body {
 .arrow-btn:hover {
   transform: scale(1.2);
 }
+
 .up-arrow {
   bottom: auto; /* placera uppåt i sektionen */
   top: 20px;    /* placera uppåt i sektionen */
-  
 }
 
 /* Exempelknappar för spel-länkar */
@@ -55,6 +85,9 @@ body {
   border-radius: 4px;
   transition: background-color 0.3s;
 }
+
 .btn:hover {
   background-color: #0056b3;
 }
+
+/* (Eventuellt övriga regler för labyrintspelet, osv.) */

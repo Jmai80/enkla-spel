@@ -6,13 +6,15 @@
   <title>Enkla Spel - Landningssida</title>
   <link rel="stylesheet" href="style.css" />
   <link svg="image/svg+xml" href="../favicon.svg" rel="icon">
-
 </head>
 <body>
+  <!-- Header -->
+  <header>
+    <h1>enklaspel.online</h1>
+  </header>
 
   <!-- Sektion 1 -->
   <section id="section1" class="screen landing">
-    <h1>Enkla Spel</h1>
     <h2>Välj spel</h2>
     <div class="game-links">
       <a href="bollar/index.html" class="btn">Bollar ⚽️</a>
@@ -30,7 +32,6 @@
   <section id="section2" class="screen landing">
     <h2>Klurigare spel 🤔</h2>
     <div class="game-links">
-      
       <a href="matematik/index.html" style="background-color: orangered;" class="btn">Matematik Plus 🧮</a>
       <a href="matematikMinus/index.html" style="background-color: orangered;" class="btn">Matematik Minus 🧮</a>
       <a href="klockan/index.html" style="background-color: orangered;" class="btn">Klockan ⏰</a>
@@ -38,9 +39,9 @@
       <a href="ordspel2/index.html" style="background-color: orangered;" class="btn">Bild till ord</a>
       <a href="labyrint2/index.html" style="background-color: orangered;" class="btn">Labyrint 2</a>
       <a href="kimslek/index.html" style="background-color: orangered;" class="btn">Kims Lek</a>
-    </div>
       <a href="simon/index.html" style="background-color: orangered;" class="btn">Simon</a>
     </div>
+    
     <!-- Uppåtpil -->
     <button class="arrow-btn up-arrow" onclick="goToSection('section1')">⬆️</button>
   </section>
@@ -49,6 +50,28 @@
     function goToSection(sectionId) {
       document.getElementById(sectionId).scrollIntoView({ behavior: "auto" });
     }
+
+    document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector("header");
+  const section1 = document.getElementById("section1");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      // Om section1 inte längre är synlig, döljs headern
+      if (!entry.isIntersecting) {
+        header.style.display = "none";
+      } else {
+        header.style.display = "block";
+      }
+    });
+  }, {
+    root: null,
+    threshold: 0.5 // Justera tröskeln efter behov
+  });
+
+  observer.observe(section1);
+});
+
   </script>
 </body>
 </html>
