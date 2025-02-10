@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engelska</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Lägg till Poppins från Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Scoreboard placeras utanför game-container -->
+  <div class="scoreboard">
+      <div class="score">rätt: <span id="score">0</span></div>
+      <div class="errors">fel: <span id="errors">0</span></div>
+  </div>
+  
+  <div class="game-container">
+    <div class="word-display" id="word-display"></div>
+    <div class="options" id="options"></div>
+    <div class="timer" id="timer">10</div>
+  </div>
+  
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <h2>Grattis!</h2>
+      <p>Du fick <span id="final-score">0</span> rätt.</p>
+    </div>
+  </div>
+  
+  <script src="app.js"></script>
+</body>
+</html>

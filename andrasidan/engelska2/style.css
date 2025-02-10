@@ -1,0 +1,103 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    position: relative; /* För att kunna positionera scoreboard absolut */
+    min-height: 100vh;
+  }
+  
+  /* Scoreboard placeras längst upp, med vänster och höger justerade */
+  .scoreboard {
+    position: relative;
+    top: 5px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-size: 1.2rem;
+  }
+  
+  /* Game container med 80% bredd och centrerad */
+  .game-container {
+    width: 80%;
+    max-width: 500px; /* Valfritt maxvärde för större skärmar */
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 80px auto 0 auto; /* Topmargin ökad för att ge plats åt scoreboard */
+  }
+  
+  .word-display {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .options button {
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .options button:hover {
+    background-color: #0056b3;
+  }
+  
+  .timer {
+    font-size: 1.5rem;
+    margin-top: 20px;
+  }
+  
+  .popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .blur {
+    filter: blur(5px);
+    background-color: black;
+    color: white;
+  }
+  .score {
+    font-size: 1.5rem;
+    background-color: rgba(80, 152, 9, 0.573);
+    padding: 10px;
+    border-radius: 3px;
+    color: white;
+  }
+  
+  .errors {
+    font-size: 1.5rem;
+    background-color: rgba(175, 10, 10, 0.648);
+    padding: 10px;
+    border-radius: 3px;
+    color: white;
+  }
+  
