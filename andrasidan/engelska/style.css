@@ -1,0 +1,114 @@
+/* Grundläggande reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body och allmän stil */
+  body, html {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(
+    135deg,
+    #ffb3ba 0%,
+    #ffdfba 33%,
+    #ffffba 66%,
+    #baffc9 100%
+  );
+    color: #fff;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Header: fast placerad överst med poängvisning och titel */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background: transparent; /* Headerns bakgrund är transparent */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    text-transform: lowercase;
+    margin: 0;
+  }
+  
+  /* Poängvisning */
+  .score {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: #fff;
+  }
+  
+  #correctCount {
+    background-color: rgba(0, 128, 0, 0.7); /* Grön bakgrund */
+  }
+  
+  #wrongCount {
+    background-color: rgba(255, 0, 0, 0.7); /* Röd bakgrund */
+  }
+  
+  /* Timer: placeras under headern, centrerad horisontellt */
+  .timer {
+    margin-top: 70px; /* Tillräckligt med utrymme under headern */
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #443333;
+  }
+  
+  /* Huvudinnehållsområde */
+  #contentArea {
+    margin-top: 20px;
+    padding: 10px;
+    min-height: 40vh;
+    width: 90%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff62;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
+  }
+  
+  /* Frågeområde */
+  .question-area {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  /* Svarsalternativ-container */
+  .options-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .options-container button {
+    font-size: 2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .options-container button:hover {
+    background-color: #0056b3;
+  }
+  

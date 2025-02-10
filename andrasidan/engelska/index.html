@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ordöversättning</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="../favicon.svg" type="image/svg+xml">
+  <!-- Google Font: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" 
+    rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div id="correctCount" class="score">rätt: 0</div>
+    
+    <div id="wrongCount" class="score">fel: 0</div>
+  </header>
+  
+  <!-- Timer placeras under headern -->
+  <div id="timer" class="timer">10</div>
+  
+  <main id="contentArea">
+    <div id="questionArea" class="question-area"></div>
+    <div id="optionsContainer" class="options-container"></div>
+  </main>
+  
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enklaspel.online - Portfölj</title>
+  <link rel="stylesheet" href="style.css" />
+  <link svg="image/svg+xml" href="../favicon.svg" rel="icon">
+  <!-- Google Font: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" 
+    rel="stylesheet">
+</head>
+<body>
+  <!-- Header med nav -->
+  <header>
+    <h1>projekt</h1>
+    <nav class="header-nav">
+      <div class="dropdown">
+        <span class="dropbtn">appar</span>
+        <div class="dropdown-content" id="appsList">
+          <a href="app1.html">App 1</a>
+          <a href="app2.html">App 2</a>
+          <a href="app3.html">App 3</a>
+          <!-- Lägg till fler appar här -->
+        </div>
+      </div>
+      <div class="dropdown">
+        <span class="dropbtn">spel</span>
+        <div class="dropdown-content" id="gamesList">
+            <a href="klockan/index.html" class="load-project">klockan</a>
+          <a href="engelska/index.html" class="load-project">engelska</a>
+          <a href="spel3.html">Spel 3</a>
+          <!-- Lägg till fler spel här -->
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+
+  <!-- Huvudinnehåll -->
+  <main id="contentArea">
+    <p>Välj ett projekt från menyn ovan.</p>
+  </main>
+
+  <script>
+    // Exempelvis för att ladda in innehåll dynamiskt utan att byta sida
+    function loadContent(url) {
+  const contentArea = document.getElementById("contentArea");
+  const iframe = document.createElement("iframe");
+  iframe.src = url;
+  iframe.style.width = "100%";
+  iframe.style.height = "100%";
+  iframe.style.border = "none";
+  
+  // Ta bort skalningen
+  // iframe.style.transform = "scale(0.8)";
+  // iframe.style.transformOrigin = "top left";
+  
+  contentArea.innerHTML = "";
+  contentArea.appendChild(iframe);
+}
+
+
+
+    // Du kan sätta event-lyssnare på länkarna om du vill
+    document.querySelectorAll(".dropdown-content a").forEach(link => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const url = e.target.getAttribute("href");
+        loadContent(url);
+      });
+    });
+  </script>
+</body>
+</html>

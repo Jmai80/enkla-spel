@@ -8,9 +8,9 @@
 /* Header */
 header {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  right: 0;
+  top: 20%;
+  width: 10%;
   background: rgba(255, 255, 255, 0.5); /* 50% genomskinlig vit bakgrund */
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   z-index: 100;

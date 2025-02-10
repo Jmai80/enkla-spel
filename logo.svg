@@ -1,0 +1,13 @@
+<svg width="400" height="100" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&amp;display=swap');
+    .logo-text {
+      font-family: 'Dancing Script', cursive;
+      font-size: 48px;
+      fill: #333;
+    }
+  </style>
+  <text x="50%" y="50%" text-anchor="middle" alignment-baseline="middle" class="logo-text">
+    enklaspel.online
+  </text>
+</svg>

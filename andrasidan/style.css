@@ -1,0 +1,102 @@
+/* Grundläggande reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body och allmän stil */
+  body, html {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #464a51, #4b4237, #324736);
+    color: #333;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  
+/* Headern: placera logga och nav i en flexcontainer */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);  /* Genomskinlig bakgrund */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+  }
+  
+  /* Logotypen (h1) – visas med små bokstäver och placerad till vänster */
+  header h1 {
+    font-size: 2rem;
+    margin: 0;
+    text-transform: lowercase; /* Om du vill säkerställa små bokstäver */
+  }
+  
+  /* Navigationen i headern */
+  .header-nav {
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* Dropdown-styling (behåll dina befintliga regler för dropdown) */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropbtn {
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    padding: 5px 10px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 120%; /* Placerar dropdownen under knappen */
+    left: 0;
+    background: #fff;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    z-index: 200;
+  }
+  
+  .dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  
+  .dropdown-content a:hover {
+    background: #ddd;
+  }
+  
+  /* Visa dropdown vid hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  
+  /* Huvudinnehållsområde */
+  #contentArea {
+    margin-top: 100px; /* Skapa utrymme för headern */
+    margin-left: 50px;
+    padding: 20px;
+    width: 90%;
+    height: calc(100vh - 120px); /* Justera höjden */
+    max-width: 800px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
+    overflow: auto; /* Lägg till scroll om innehållet är för stort */
+  }
