@@ -50,6 +50,9 @@ body {
     border-radius: 5px;
     background-color: #007bff;
     color: white;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+      
   }
   
   .options button:hover {
@@ -71,6 +74,7 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
+    z-index: 200;
   }
   
   .popup-content {
@@ -85,6 +89,8 @@ body {
     background-color: black;
     color: white;
   }
+  
+  /* Score och fel */
   .score {
     font-size: 1.5rem;
     background-color: rgba(80, 152, 9, 0.573);
@@ -99,5 +105,34 @@ body {
     padding: 10px;
     border-radius: 3px;
     color: white;
+  }
+  
+  /* Startskärm – överlagring med suddig/frysad bakgrund */
+  .start-screen {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 300;
+  }
+  
+  /* Startknappen */
+  #start-button {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #start-button:hover {
+    background-color: #0056b3;
   }
   

@@ -5,13 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Engelska</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Lägg till Poppins från Google Fonts -->
+  <!-- Google Fonts: Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Scoreboard placeras utanför game-container -->
+  <!-- Startskärm med startknapp -->
+  <div id="start-screen" class="start-screen">
+      <button id="start-button">STARTA</button>
+  </div>
+
+  <!-- Scoreboard -->
   <div class="scoreboard">
       <div class="score">rätt: <span id="score">0</span></div>
       <div class="errors">fel: <span id="errors">0</span></div>
@@ -30,6 +35,8 @@
     </div>
   </div>
   
+  <!-- Inkludera words.js före app.js -->
+  <script src="words.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
