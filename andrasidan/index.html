@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Enklaspel.online - Portfölj</title>
   <link rel="stylesheet" href="style.css" />
-  <link svg="image/svg+xml" href="../favicon.svg" rel="icon">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <!-- Google Font: Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,17 +14,17 @@
     rel="stylesheet">
 </head>
 <body>
-  <!-- Header med nav -->
+  <!-- Header med navigation för desktop -->
   <header>
     <h1>projekt</h1>
     <nav class="header-nav">
       <div class="dropdown">
         <span class="dropbtn">appar</span>
         <div class="dropdown-content" id="appsList">
-          <a href="app1.html">App 1</a>
-          <a href="app2.html">App 2</a>
-          <a href="app3.html">App 3</a>
-          <!-- Lägg till fler appar här -->
+          <a href="app1.html" data-id="app1">App 1</a>
+          <a href="app2.html" data-id="app2">App 2</a>
+          <a href="app3.html" data-id="app3">App 3</a>
+          <!-- Fler appar kan läggas till här -->
         </div>
       </div>
       <div class="dropdown">
@@ -32,45 +32,41 @@
         <div class="dropdown-content" id="gamesList">
           <a href="klockan/index.html" class="load-project">klockan</a>
           <a href="engelska/index.html" class="load-project">engelska</a>
-          <a href="engelska2/index.html" class="load-project">engelska två</a>
-          <!-- Lägg till fler spel här -->
+          <a href="engelska2/index.html" class="load-project" id="engelska2">engelska två</a>
+          <!-- Fler spel kan läggas till här -->
         </div>
       </div>
     </nav>
   </header>
   
-
-  <!-- Huvudinnehåll -->
+  <!-- Huvudinnehållsområde för desktop -->
   <main id="contentArea">
     <p>Välj ett projekt från menyn ovan.</p>
   </main>
 
-  <script>
-    // Exempelvis för att ladda in innehåll dynamiskt utan att byta sida
-    function loadContent(url) {
-  const contentArea = document.getElementById("contentArea");
-  const iframe = document.createElement("iframe");
-  iframe.src = url;
-  iframe.style.width = "100%";
-  iframe.style.height = "100%";
-  iframe.style.border = "none";
-  
-  // Ta bort skalningen
-  // iframe.style.transform = "scale(0.8)";
-  // iframe.style.transformOrigin = "top left";
-  
-  contentArea.innerHTML = "";
-  contentArea.appendChild(iframe);
-}
+  <!-- Mobil-flikmeny -->
+  <div class="mobile-tabs">
+    <button class="tab-btn active" data-target="apps">Appar</button>
+    <button class="tab-btn" data-target="games">Spel</button>
+  </div>
 
-    // Du kan sätta event-lyssnare på länkarna om du vill
-    document.querySelectorAll(".dropdown-content a").forEach(link => {
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        const url = e.target.getAttribute("href");
-        loadContent(url);
-      });
-    });
-  </script>
+  <!-- Mobilinnehåll med flikindelning -->
+  <div class="mobile-content">
+    <!-- Appar-flik -->
+    <div id="apps" class="tab-content active">
+      <a href="app1.html" data-id="app1">App 1</a>
+      <a href="app2.html" data-id="app2">App 2</a>
+      <a href="app3.html" data-id="app3">App 3</a>
+    </div>
+    <!-- Spel-flik -->
+    <div id="games" class="tab-content">
+      <a href="klockan/index.html" class="load-project">klockan</a>
+      <a href="engelska/index.html" class="load-project">engelska</a>
+      <a href="engelska2/index.html" class="load-project" id="engelska2">engelska två</a>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
+

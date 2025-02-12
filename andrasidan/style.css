@@ -1,102 +1,184 @@
 /* Grundläggande reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Body och allmän stil */
-  body, html {
-    font-family: "Poppins", sans-serif;
-    background: linear-gradient(135deg, #464a51, #4b4237, #324736);
-    color: #333;
-    width: 100%;
-    min-height: 100vh;
-    overflow: hidden;
-  }
-  
-/* Headern: placera logga och nav i en flexcontainer */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body och allmän stil */
+body, html {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #464a51, #4b4237, #324736);
+  color: #333;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Header: placera logga och nav i en flexcontainer */
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.8);  /* Genomskinlig bakgrund */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    z-index: 100;
-  }
-  
-  /* Logotypen (h1) – visas med små bokstäver och placerad till vänster */
-  header h1 {
-    font-size: 2rem;
-    margin: 0;
-    text-transform: lowercase; /* Om du vill säkerställa små bokstäver */
-  }
-  
-  /* Navigationen i headern */
-  .header-nav {
-    display: flex;
-    gap: 20px;
-  }
-  
-  /* Dropdown-styling (behåll dina befintliga regler för dropdown) */
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropbtn {
-    font-size: 1rem;
-    color: #333;
-    cursor: pointer;
-    padding: 5px 10px;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 120%; /* Placerar dropdownen under knappen */
-    left: 0;
-    background: #fff;
-    min-width: 150px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    border-radius: 4px;
-    z-index: 200;
-  }
-  
-  .dropdown-content a {
-    display: block;
-    padding: 10px 15px;
-    color: #333;
-    text-decoration: none;
-    transition: background 0.2s;
-  }
-  
-  .dropdown-content a:hover {
-    background: #ddd;
-  }
-  
-  /* Visa dropdown vid hover */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8); /* Genomskinlig bakgrund */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 100;
+}
+
+/* Logotypen (h1) – visas med små bokstäver */
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+  text-transform: lowercase;
+}
+
+/* Navigation */
+.header-nav {
+  display: flex;
+  gap: 20px;
+}
+
+/* Dropdown-styling */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+/* Dropdown-innehåll */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 120%; /* Placerar dropdownen under knappen */
+  left: 0;
+  background: #fff;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  z-index: 200;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.dropdown-content a:hover {
+  background: #ddd;
+}
+
+/* Visa dropdown vid hover på enheter med pekare (desktop) */
+@media (hover: hover) and (pointer: fine) {
   .dropdown:hover .dropdown-content {
     display: block;
   }
-  
-  
-  /* Huvudinnehållsområde */
-  #contentArea {
-    margin-top: 100px; /* Skapa utrymme för headern */
-    margin-left: 50px;
-    padding: 20px;
-    width: 90%;
-    height: calc(100vh - 120px); /* Justera höjden */
-    max-width: 800px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-align: left;
-    overflow: auto; /* Lägg till scroll om innehållet är för stort */
+}
+
+/* Huvudinnehållsområde för desktop */
+#contentArea {
+  margin-top: 100px; /* Skapa utrymme för headern */
+  margin-left: 50px;
+  padding: 20px;
+  width: 90%;
+  height: calc(100vh - 120px); /* Justera höjden */
+  max-width: 800px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: left;
+  overflow: auto;
+}
+
+/* Responsiv styling för mobila enheter */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 10px;
   }
+  
+  /* Dölj desktop-nav och innehåll */
+  .header-nav {
+    display: none;
+  }
+  #contentArea {
+    display: none;
+  }
+  
+  /* Mobile tabs */
+  .mobile-tabs {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 20px;
+  }
+  
+  .mobile-tabs .tab-btn {
+    background: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .mobile-tabs .tab-btn.active {
+    background-color: #ddd;
+  }
+  
+  /* Mobile content - positionering kan justeras efter behov */
+  .mobile-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    width: 100%;
+  }
+  
+  /* Dölj alla fliksektioner som standard */
+  .tab-content {
+    display: none;
+  }
+  
+  /* Visa aktiv flik */
+  .tab-content.active {
+    display: block;
+  }
+  
+  /* Styling för länkar i mobilinnehållet */
+  .mobile-content a {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 15px 0;
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  .mobile-content a:hover,
+  .mobile-content a:active {
+    background-color: #f0f0f0;
+  }
+}

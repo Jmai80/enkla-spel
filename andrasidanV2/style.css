@@ -1,0 +1,133 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+  /* Body – vit bakgrund med svart text */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    color: #000;
+}
+  
+  /* Header – svart bakgrund med vit text */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #000;
+    color: #fff;
+}
+  
+  /* Navigation */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+nav ul li a {
+    position: relative;
+    padding-bottom: 0.2em;
+    z-index: 1;
+    color: #fff;
+}
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0.25em;  
+    background-color: red;  
+    z-index: 0;
+    transition: height 0.8s ease-in-out, background-color 0.8s ease-in-out;
+}
+  
+  /* Gemensam stil för alla section-element */
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+  
+  /* Rubriker och paragrafer */
+section h1,
+section h2 {
+    margin-bottom: 10px;
+    text-align: left;
+}
+  
+section p {
+    text-align: left;
+}
+  
+  /* #main – startsida med vit bakgrund och svart text */
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+    padding: 20px;
+    color: #000;
+}
+  
+#main h1 {
+    font-size: 3em;
+}
+  
+#main p {
+    font-size: 1.5em;
+}
+  
+#link1 {
+    background: white;
+    height: 100vh;
+    padding: 20px;
+    color: #000;
+}
+  
+
+#link2 {
+    background: whitesmoke;
+    height: 100vh;
+    padding: 20px;
+    color: #000;
+}
+
+/* Grid-container för spel-sektionen */
+#link2 .game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+    /* Du kan lägga till padding om du vill ha extra utrymme runt gridet */
+  }
+  
+  /* Stil för varje grid-item */
+  #link2 .game-item {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  #link2 .game-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Rubrik i varje game-item */
+  #link2 .game-item h3 {
+    padding: 10px;
+    font-size: 1.2em;
+    color: #333;
+  }
+  
